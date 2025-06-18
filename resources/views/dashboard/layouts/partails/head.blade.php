@@ -3,39 +3,50 @@
 @endphp
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Responsive HTML Admin Dashboard Template based on Bootstrap 5">
-	<meta name="author" content="NobleUI">
-	<meta name="keywords" content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Responsive HTML Admin Dashboard Template based on Bootstrap 5">
+    <meta name="author" content="NobleUI">
+    <meta name="keywords"
+        content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
-	<title>NobleUI -@yield('title')</title>
+    <title>NobleUI -@yield('title')</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <!-- End fonts -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
-	<!-- core:css -->
-	<link rel="stylesheet" href="{{asset('assets')}}/vendors/core/core.css">
-	<!-- endinject -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- End fonts -->
 
-	<!-- Plugin css for this page -->
-	<link rel="stylesheet" href="{{asset('assets')}}/vendors/flatpickr/flatpickr.min.css">
-	<!-- End plugin css for this page -->
+    <!-- core:css -->
+    <link rel="stylesheet" href="{{ asset('assets') }}/vendors/core/core.css">
+    <!-- endinject -->
 
-	<!-- inject:css -->
-	<link rel="stylesheet" href="{{asset('assets')}}/fonts/feather-font/css/iconfont.css">
-	<link rel="stylesheet" href="{{asset('assets')}}/vendors/flag-icon-css/css/flag-icon.min.css">
-	<!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="{{ asset('assets') }}/vendors/flatpickr/flatpickr.min.css">
+    <!-- End plugin css for this page -->
 
-  <!-- Layout styles -->  
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{{ asset('assets') }}/fonts/feather-font/css/iconfont.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/vendors/flag-icon-css/css/flag-icon.min.css">
+    <!-- endinject -->
 
-<link rel="stylesheet" href="{{ asset('assets/css/demo1/style' . $dir . '.css') }}">
+    <!-- Layout styles -->
 
-  <!-- End layout styles -->
+    <link rel="stylesheet" href="{{ asset('assets/css/demo1/style' . $dir . '.css') }}">
 
-  <link rel="shortcut icon" href="{{asset('assets')}}/images/favicon.png" />
+    <!-- End layout styles -->
+
+    <link rel="shortcut icon" href="{{ asset('assets') }}/images/favicon.png" />
+	<style>
+		body{
+			font-family: "Cairo", sans-serif;
+		}
+	</style>
+	@yield('style')
 </head>

@@ -1,6 +1,7 @@
 @extends('dashboard.layouts.master')
 @section('title','Dashboard')
-
+@section('style')
+@stop
 @section('content')
     <div class="page-content">
 
@@ -126,3 +127,5 @@
      
 			</div>
 @endsection
+@section('script')
+@stop
