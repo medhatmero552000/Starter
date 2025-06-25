@@ -22,6 +22,14 @@ class LoginController extends Controller
         ], $remember_me)) {
             return redirect()->route('admin.index');
         }
-        return redirect()->back()->with('error','هناك خطأ فى البيانات المدخلة');
-        }
+        return redirect()->back()->with('error', 'هناك خطأ فى البيانات المدخلة');
+    }
+    public function logout(Request $request)
+    {
+        Auth::guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('admin.login');
+    }
 }

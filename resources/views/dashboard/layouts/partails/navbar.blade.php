@@ -54,10 +54,15 @@
                              </a>
                          </li>
                          <li class="py-2 dropdown-item">
-                             <a href="javascript:;" class="text-body ms-0">
+                             <a href="#" class="text-body ms-0"
+                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                  <i class="me-2 icon-md" data-feather="log-out"></i>
-                                 <span>Log Out</span>
+                                 <span>تسجيل الخروج</span>
                              </a>
+                             <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                                 @csrf
+                                 
+                             </form>
                          </li>
                      </ul>
                  </div>
