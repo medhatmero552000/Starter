@@ -44,6 +44,11 @@ License: For each use you must have a valid license purchased only from above li
     <!-- End layout styles -->
 
     <link rel="shortcut icon" href="{{ asset('assets') }}/images/favicon.png" />
+    	<style>
+		body{
+			font-family: "Cairo", sans-serif;
+		}
+	</style>
 </head>
 
 <body>

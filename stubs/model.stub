@@ -16,7 +16,7 @@ class {{ class }} extends Model
     protected $table = ''; 
 
 # ----------------- THE ATTRIBUTES THAT ARE MASS ASSIGNNABLE ----------------- #
-    protected $guarded = ['id']; 
+    protected $guarded = []; 
 
 
 # -------------------------------- UPLOAD PATH ------------------------------- #
@@ -24,6 +24,10 @@ class {{ class }} extends Model
     
 # ------------------------------- UPLOAD FIELDS ------------------------------ #
     const UPLOADFIELDS=[];
+    # ----------------------------------- CASTS ---------------------------------- #
+    protected $casts = [
+       //fields to cast
+    ];
 }
 
 

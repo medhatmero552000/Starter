@@ -1,22 +1,22 @@
 <?php
 
-namespace App\Models\Models\Dashboard\Auth;
+namespace App\Models\Dashboard;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-
-class Admin extends Model
+class SettingTranslation extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+    public $timestamps=false;
+   
 
 
 # -------------------- THE TABLE ASSOCIATED WITH THE MODEL ------------------- #
-    protected $table = ''; 
+    protected $table = 'setting_translations'; 
+  
 
 # ----------------- THE ATTRIBUTES THAT ARE MASS ASSIGNNABLE ----------------- #
-    protected $guarded = ['id']; 
+    protected $guarded = []; 
 
 
 # -------------------------------- UPLOAD PATH ------------------------------- #
