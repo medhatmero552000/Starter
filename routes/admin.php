@@ -9,7 +9,12 @@ use App\Http\Controllers\Dashboard\ThemeController;
 Route::middleware('auth:admin')->group(function () {
     Route::get('/', ThemeController::class)->name('index');
     // ✅ الأعدادات العامة
-      Route::get('settings', [Admin_panel_settings_Controller::class,'index'])->name('setting.index');
+    Route::group(['prefix'=>'settings'],function(){
+        Route::get('setting', [Admin_panel_settings_Controller::class,'index'])->name('setting.index');
+        Route::get('Shipping_methods/{type}', [Admin_panel_settings_Controller::class,'editshipping'])->name('setting.editshipping');
+        Route::put('Shipping_methods/{id}', [Admin_panel_settings_Controller::class,'updateshipping'])->name('setting.updateshipping');
+
+    });
 });
 
 // ✅ لصفحة تسجيل الدخول للمشرف (لو مش مسجل)

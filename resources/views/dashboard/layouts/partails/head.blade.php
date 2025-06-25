@@ -48,5 +48,6 @@
 			font-family: "Cairo", sans-serif;
 		}
 	</style>
+ 
 	@yield('style')
 </head>

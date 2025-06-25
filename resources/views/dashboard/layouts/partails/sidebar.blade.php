@@ -81,16 +81,16 @@
                 <div class="collapse" id="advancedUI">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="pages/advanced-ui/cropper.html" class="nav-link">توصيل مجانى</a>
+                            <a href="{{ route('admin.setting.editshipping','free') }}" class="nav-link">توصيل مجانى</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/advanced-ui/owl-carousel.html" class="nav-link">توصيل داخلى</a>
+                            <a href="{{ route('admin.setting.editshipping','local') }}" class="nav-link">توصيل داخلى</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/advanced-ui/sortablejs.html" class="nav-link">توصيل خارجى</a>
+                            <a href="{{ route('admin.setting.editshipping','outer') }}">توصيل خارجى</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/advanced-ui/sortablejs.html" class="nav-link">توصيل دولى</a>
+                            <a href="{{ route('admin.setting.editshipping','international') }}" class="nav-link">توصيل دولى</a>
                         </li>
 
                     </ul>

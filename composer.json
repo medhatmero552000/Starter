@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.8",
         "mcamara/laravel-localization": "^2.3",
         "outhebox/blade-flags": "^1.5",
+        "realrashid/sweet-alert": "^7.3",
         "yajra/laravel-datatables": "^10"
     },
     "require-dev": {

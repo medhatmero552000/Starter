@@ -26,7 +26,7 @@ class SettingSeeder  extends Seeder
         foreach ($settings as $key => $value) {
             Setting::updateOrCreate(
                 ['key' => $key],
-                ['value' => $value, 'updated_at' => now()]
+                ['plain_value' => $value, 'updated_at' => now()]
             );
         }
 
