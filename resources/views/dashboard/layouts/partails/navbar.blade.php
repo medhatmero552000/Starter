@@ -20,12 +20,12 @@
              <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     <img class="wd-30 ht-30 rounded-circle" src="{{ asset('assets/images/user.png') }}" alt="">
+                     <img class="wd-30 ht-30 rounded-circle" src="{{ asset('assets/images/companies_logo/logo3.png') }}" alt="">
                  </a>
                  <div class="p-0 dropdown-menu" aria-labelledby="profileDropdown">
                      <div class="px-5 py-3 d-flex flex-column align-items-center border-bottom">
                          <div class="mb-3">
-                             <img class="wd-80 ht-80 rounded-circle" src="{{ asset('assets/images/user.png') }}"
+                             <img class="wd-80 ht-80 rounded-circle" src="{{ asset('assets/images/companies_logo/logo3.png') }}"
                                  alt="">
 
                          </div>
@@ -36,9 +36,9 @@
                      </div>
                      <ul class="p-1 list-unstyled">
                          <li class="py-2 dropdown-item">
-                             <a href="pages/general/profile.html" class="text-body ms-0">
+                             <a href="{{ route('admin.profile.edit') }}" class="text-body ms-0">
                                  <i class="me-2 icon-md" data-feather="user"></i>
-                                 <span>Profile</span>
+                                 <span>الملف الشخصى</span>
                              </a>
                          </li>
                          <li class="py-2 dropdown-item">

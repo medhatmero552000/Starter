@@ -69,9 +69,8 @@ class Admin_panel_settings_Controller extends Controller
          return redirect()->back();
       } catch (\Exception $e) {
          DB::rollBack(); // تراجع عن أي تغيير
-
+         Alert::toast('لم يتم الحفظ  ', 'error'); // 👈 توست ناجح
          return redirect()->back();
-            Alert::toast('لم يتم الحفظ  ', 'error'); // 👈 توست ناجح
+      }
    }
-}
 }

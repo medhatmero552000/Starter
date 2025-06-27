@@ -21,16 +21,16 @@
                                 <input type="hidden" name="id" value="{{ $data->id }}">
                                 <input type="text" name="value" class="form-control form-control-sm"
                                     id="colFormLabelSm" placeholder="form-control-sm" value="{{ $data->value }}">
+                                    <x-input-error :messages="$errors->get('value')" class="mt-2" />
                             </div>
 
-                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
 
                             <div class="mb-3 col-6">
                                 <label for="colFormLabel" class="form-label">قيمة التوصيل</label>
                                 <input type="number" value="{{ $data->plain_value }}" name="plain_value" class="form-control"
                                     id="colFormLabel" placeholder="قيمة التوصبل">
+                                    <x-input-error :messages="$errors->get('plain_value')" class="mt-2" />
                             </div>
-                            <x-input-error :messages="$errors->get('value')" class="mt-2" />
 
                             <div>
                                 <label for="colFormLabelLg" class="form-label">حالة التفعيل</label>
