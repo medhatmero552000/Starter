@@ -30,10 +30,10 @@
                 <div class="collapse" id="emails">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{ route('admin.categories.index') }}" class="nav-link">عرض الأقسام</a>
+                            <a href="" class="nav-link">عرض الأقسام</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.categories.create') }}" class="nav-link">إضافة قسم جديد</a>
+                            <a href="" class="nav-link">إضافة قسم جديد</a>
                         </li>
                       
                     </ul>
@@ -52,7 +52,7 @@
                 <div class="collapse" id="uiComponents">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{ route('admin.setting.index') }}" class="nav-link">الضبط العام</a>
+                            <a href="" class="nav-link">الضبط العام</a>
                         </li>
 
                     </ul>
@@ -69,16 +69,16 @@
                 <div class="collapse" id="advancedUI">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="{{ route('admin.setting.editshipping','free') }}" class="nav-link">توصيل مجانى</a>
+                            <a href="" class="nav-link">توصيل مجانى</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.setting.editshipping','local') }}" class="nav-link">توصيل داخلى</a>
+                            <a href="" class="nav-link">توصيل داخلى</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.setting.editshipping','outer') }}">توصيل خارجى</a>
+                            <a href="">توصيل خارجى</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('admin.setting.editshipping','international') }}" class="nav-link">توصيل دولى</a>
+                            <a href="" class="nav-link">توصيل دولى</a>
                         </li>
 
                     </ul>

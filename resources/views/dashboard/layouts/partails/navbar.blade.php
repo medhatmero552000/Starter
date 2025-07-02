@@ -36,7 +36,7 @@
                      </div>
                      <ul class="p-1 list-unstyled">
                          <li class="py-2 dropdown-item">
-                             <a href="{{ route('admin.profile.edit') }}" class="text-body ms-0">
+                             <a href="" class="text-body ms-0">
                                  <i class="me-2 icon-md" data-feather="user"></i>
                                  <span>الملف الشخصى</span>
                              </a>

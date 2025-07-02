@@ -5,42 +5,28 @@ use App\Http\Controllers\Dashboard\AdminProfileController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\LoginController;
+use App\Http\Controllers\dashboard\ProductController;
 use App\Http\Controllers\Dashboard\ThemeController;
+use Illuminate\Support\Facades\Auth;
 
-// ✅ للمشرف المسجل دخوله
-Route::middleware('auth:admin')->group(function () {
+// ✅ أولاً: تحويل من "/" إلى "/admin" أو "/admin/login"
+Route::get('/', function () {
+    if (Auth::guard('admin')->check()) {
+        return redirect()->route('admin.index');
+    }
+    return redirect()->route('admin.login');
+});
+
+// ✅ راوتات المشرف المسجل دخوله
+Route::middleware('auth:admin')->prefix('admin')->group(function () {
     Route::get('/', ThemeController::class)->name('index');
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-    // ✅ الأعدادات العامة
-    Route::group(['prefix' => 'settings'], function () {
-        Route::get('setting', [Admin_panel_settings_Controller::class, 'index'])->name('setting.index');
-        Route::get('Shipping_methods/{type}', [Admin_panel_settings_Controller::class, 'editshipping'])->name('setting.editshipping');
-        Route::put('Shipping_methods/{id}', [Admin_panel_settings_Controller::class, 'updateshipping'])->name('setting.updateshipping');
-    }); // ← ✅ قفلنا مجموعة settings
-    // ✅ start Profile Routes
-    Route::group(['prefix' => 'profile'], function () {
-        Route::get('edit', [AdminProfileController::class, 'editprofile'])->name('profile.edit');
-        Route::put('update', [AdminProfileController::class, 'updateprofile'])->name('profile.update');
-        Route::put('updatePassword', [AdminProfileController::class, 'updatepassword'])->name('password.update');
-    }); // ← End Profile Routes
-    // ✅ start categories Routes
-    Route::group(['prefix' => 'categories'], function () {
-        Route::resource('categories', CategoryController::class)->names([
-            'index' => 'categories.index',
-            'create' => 'categories.create',
-            'store' => 'categories.store',
-            'show' => 'categories.show',
-            'edit' => 'categories.edit',
-            'update' => 'categories.update',
-            'destroy' => 'categories.destroy',
-        ]);
-    }); // ← End categories Routes
+});
 
-}); // ← ✅ قفلنا مجموعة middleware
 
-// ✅ لصفحة تسجيل الدخول للمشرف (لو مش مسجل)
-Route::middleware('guest:admin')->group(function () {
+// ✅ راوتات تسجيل الدخول للمشرف
+Route::middleware('guest:admin')->prefix('admin')->group(function () {
     Route::get('login', [LoginController::class, 'login'])->name('login');
     Route::post('login', [LoginController::class, 'postlogin'])->name('post.login');
 });
