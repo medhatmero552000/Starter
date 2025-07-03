@@ -11,10 +11,17 @@
 - إحصائيات أولية في الداشبورد
 - زر يعمل AJAX لإعادة تحميل المحتوى
 - حزم أساسية:
+- تكبير وتصغير مساحه العمل
   - spatie/laravel-permission (اختياري)
-  - laravel/ui أو breeze
+  - astrotomic/laravel-translatable
+  - mcamara laravel-localization
+  -  breeze
   - sweetalert2
   - feather-icons
+  - livewire 3
+  - yajra
+  - yajra datatables
+  - blade-flags
 
 🔐 حساب المشرف الافتراضي:
 البريد: medhatmero552000@gmail.com 
