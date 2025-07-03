@@ -31,5 +31,6 @@
 @include('dashboard.layouts.partails.scripts')
 
    @include('sweetalert::alert')
+   
 </body>
 </html>    

@@ -1,12 +1,13 @@
 <!-- Dropdown Menu -->
 <div class="dropdown">
-    <a class="nav-link dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
-{{--        <img src="{{ asset('vendor/blade-flags/language-' . LaravelLocalization::getCurrentLocale() . '.svg') }}"--}}
-{{--            width="20" height="20">--}}
-        <i data-feather="globe"></i>
-{{--        <span class="ms-1 me-1 d-none d-md-inline-block">{{ LaravelLocalization::getCurrentLocaleNative() }}</span>--}}
-    </a>
+@php
+    $marginClass = app()->getLocale() === 'ar' ? 'ms-2' : 'ms-2';
+@endphp
+
+<a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    {{ LaravelLocalization::getSupportedLocales()[LaravelLocalization::getCurrentLocale()]['native'] }}
+<i data-feather="globe" class="fs-3 cursor-pointer {{ $marginClass }}"></i>
+</a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
