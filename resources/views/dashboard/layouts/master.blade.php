@@ -7,6 +7,7 @@
 <html lang="en">
 
 
+
 @include('dashboard.layouts.partails.head')
 
 <body dir={{ $dir }}>

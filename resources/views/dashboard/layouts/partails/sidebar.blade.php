@@ -2,7 +2,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="{{ route('admin.index') }}" class="sidebar-brand">
-            Beam<span>Company</span>
+            Future<span>School-2</span>
         </a>
         <div class="sidebar-toggler not-active">
             <span></span>

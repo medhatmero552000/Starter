@@ -5,7 +5,7 @@
 @section('content')
     <div class="page-content">
 
-        <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
+        <div class="flex-wrap d-flex justify-content-between align-items-center grid-margin">
           <div>
             <h4 class="mb-3 mb-md-0">{{strtoupper(__('keywords.Welcome to Dashboard'))}}</h4>
           </div>
@@ -19,8 +19,8 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">إجمالى الطلبات</h6>
-                      <div class="dropdown mb-2">
+                      <h6 class="mb-0 card-title">إجمالى الطلبات</h6>
+                      <div class="mb-2 dropdown">
                     
                       </div>
                     </div>
@@ -46,8 +46,8 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">إجمالى المبيعات</h6>
-                      <div class="dropdown mb-2">
+                      <h6 class="mb-0 card-title">إجمالى المبيعات</h6>
+                      <div class="mb-2 dropdown">
                     
                       </div>
                     </div>
@@ -55,26 +55,46 @@
                       <div class="col-6 col-md-12 col-xl-5">
                         <h3 class="mb-2">$35,084</h3>
                         <div class="d-flex align-items-baseline">
-                          <p class="text-danger">
-                         
-                       
-                          </p>
                         </div>
                       </div>
                       <div class="col-6 col-md-12 col-xl-7">
-                        <div id="ordersChart4" class="mt-md-3 mt-xl-0"></div>
+                        <div id="ordersChart2" class="mt-md-3 mt-xl-0"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               {{-- ====================================================================== --}}
-              <div class="col-md-3 grid-margin stretch-card">
+               <div class="col-md-3 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">عدد المنتجات</h6>
-                      <div class="dropdown mb-2">
+                      <h6 class="mb-0 card-title">New Orders</h6>
+                
+                    </div>
+                    <div class="row">
+                      <div class="col-6 col-md-12 col-xl-5">
+                        <h3 class="mb-2">35,084</h3>
+                        <div class="d-flex align-items-baseline">
+                          <p class="text-danger">
+                            <span>-2.8%</span>
+                            <i data-feather="arrow-down" class="mb-1 icon-sm"></i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-12 col-xl-7">
+                        <div id="ordersChart" class="mt-md-3 mt-xl-0"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             <div class="col-md-3 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                      <h6 class="mb-0 card-title">عدد المنتجات</h6>
+                      <div class="mb-2 dropdown">
                    
                       </div>
                     </div>
@@ -89,33 +109,7 @@
                         </div>
                       </div>
                       <div class="col-6 col-md-12 col-xl-7">
-                        <div id="ordersChart" class="mt-md-3 mt-xl-0"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-baseline">
-                      <h6 class="card-title mb-0">عدد العملاء</h6>
-                      <div class="dropdown mb-2">
-                     
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 col-md-12 col-xl-5">
-                        <h3 class="mb-2">$89.87%</h3>
-                        <div class="d-flex align-items-baseline">
-                          <p class="text-success">
-                         
-                            
-                          </p>
-                        </div>
-                      </div>
-                      <div class="col-6 col-md-12 col-xl-7">
-                        <div id="growthChart" class="mt-md-3 mt-xl-0"></div>
+                        <div id="ordersChart4" class="mt-3 mt-xl-0"></div>
                       </div>
                     </div>
                   </div>
