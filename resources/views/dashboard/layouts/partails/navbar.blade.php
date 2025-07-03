@@ -14,19 +14,38 @@
          </form>
          <ul class="navbar-nav">
              <li class="nav-item dropdown">
+                 {{-- زرار ريلود للصفحة --}}
+                 <span id="" style="cursor: pointer;" onclick="location.reload();">
+                     <i data-feather="refresh-ccw" class="me-3"></i>
+                 </span>
+                 {{-- نهاية الزرار --}}
+
+
+
+                 {{-- زرار تكبير وتصغير الشاشة --}}
+                 <span id="btnFullscreen" style="cursor: pointer;">
+                     <i data-feather="maximize" class="me-3"></i>
+                 </span>
+                 {{-- نهاية الزرار --}}
+
+
+
+
+
+
                  <x-lang-component></x-lang-component>
              </li>
-
              <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     <img class="wd-30 ht-30 rounded-circle" src="{{ asset('assets/images/companies_logo/logo3.png') }}" alt="">
+                     <img class="wd-30 ht-30 rounded-circle" src="{{ asset('assets/images/companies_logo/logo3.png') }}"
+                         alt="">
                  </a>
                  <div class="p-0 dropdown-menu" aria-labelledby="profileDropdown">
                      <div class="px-5 py-3 d-flex flex-column align-items-center border-bottom">
                          <div class="mb-3">
-                             <img class="wd-80 ht-80 rounded-circle" src="{{ asset('assets/images/companies_logo/logo3.png') }}"
-                                 alt="">
+                             <img class="wd-80 ht-80 rounded-circle"
+                                 src="{{ asset('assets/images/companies_logo/logo3.png') }}" alt="">
 
                          </div>
                          <div class="text-center">
@@ -61,7 +80,7 @@
                              </a>
                              <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
                                  @csrf
-                                 
+
                              </form>
                          </li>
                      </ul>

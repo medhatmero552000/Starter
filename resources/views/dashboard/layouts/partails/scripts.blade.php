@@ -15,7 +15,65 @@
 	<!-- Custom js for this page -->
   <script src="{{asset('assets')}}/js/dashboard-dark.js"></script>
 	<!-- End custom js for this page -->
+
+
+
+{{--Start Custom Script to maxmize and minimize screen --}}
+
 <script>
-	feather.replace();
+	document.addEventListener('DOMContentLoaded', () => {
+		const btnWrapper = document.getElementById('btnFullscreen');
+		
+		if (!btnWrapper) {
+			console.warn('🚨 الزر btnFullscreen غير موجود!');
+			return;
+		}
+		
+    function updateIcon(isFullscreen) {
+		btnWrapper.innerHTML = `<i data-feather="${isFullscreen ? 'minimize' : 'maximize'}" class="me-3"></i>`;
+		feather.replace();
+    }
+	
+    function toggleFullscreen() {
+		if (!document.fullscreenElement) {
+			document.documentElement.requestFullscreen()
+			.then(() => {
+				updateIcon(true);
+				localStorage.setItem('fullscreen', 'true');
+			})
+			.catch(err => alert('فشل الدخول لوضع ملء الشاشة: ' + err.message));
+		} else {
+			document.exitFullscreen()
+			.then(() => {
+				updateIcon(false);
+				localStorage.setItem('fullscreen', 'false');
+			})
+			.catch(err => alert('فشل الخروج من وضع ملء الشاشة: ' + err.message));
+		}
+    }
+
+    btnWrapper.addEventListener('click', toggleFullscreen);
+	
+    document.addEventListener('fullscreenchange', () => {
+		const isFull = !!document.fullscreenElement;
+		updateIcon(isFull);
+		localStorage.setItem('fullscreen', isFull ? 'true' : 'false');
+    });
+	
+    // استعادة الحالة من localStorage
+    if (localStorage.getItem('fullscreen') === 'true') {
+		document.documentElement.requestFullscreen()
+        .then(() => updateIcon(true))
+        .catch(() => updateIcon(false));
+    }
+	
+    feather.replace();
+});
 </script>
-		@yield('script')
+{{--End Custom Script to maxmize and minimize screen --}}
+
+
+
+
+
+@yield('script')

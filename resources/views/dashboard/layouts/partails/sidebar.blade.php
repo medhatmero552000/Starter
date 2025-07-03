@@ -15,8 +15,8 @@
             <li class="nav-item nav-category">Main</li>
             <li class="nav-item">
                 <a href="{{ route('admin.index') }}" class="nav-link">
-                    <i class="link-icon" data-feather="home"></i>
-                    <span class="link-title">الصفحه الرئيسية</span>
+                    <i class="link-icon" data-feather="activity"></i>
+                    <span class="link-title">{{ __('keywords.dashboard') }} </span>
                 </a>
             </li>
             <li class="nav-item nav-category">إدارة المنتجات</li>

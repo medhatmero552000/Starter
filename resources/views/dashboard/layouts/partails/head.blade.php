@@ -43,11 +43,26 @@
     <!-- End layout styles -->
 
     <link rel="shortcut icon" href="{{ asset('assets') }}/images/favicon.png" />
-	<style>
-		body{
-			font-family: "Cairo", sans-serif;
-		}
-	</style>
- 
-	@yield('style')
+    <style>
+        body {
+            font-family: "Cairo", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .sidebar {
+            font-family: "Cairo", sans-serif;
+            font-size: 16px !important;
+            font-weight: 400;
+        }
+
+        .sidebar,
+        .sidebar .sidebar-body .nav .nav-item .nav-link,
+        .sidebar .sidebar-body .nav .nav-item .nav-link .link-title {
+            font-family: "Cairo", sans-serif;
+            font-size: 0.9375rem !important;
+            font-weight: 400;
+        }
+    </style>
+    @yield('style')
 </head>
