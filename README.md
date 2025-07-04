@@ -19,7 +19,6 @@
   - sweetalert2
   - feather-icons
   - livewire 3
-  - yajra
   - yajra datatables
   - blade-flags
   - spatie laravel-sluggable
