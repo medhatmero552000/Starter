@@ -22,6 +22,7 @@
   - yajra
   - yajra datatables
   - blade-flags
+  - spatie laravel-sluggable
     Updates:
     - lastupdate Add Stages 5/7/2025 
     
