@@ -12,6 +12,8 @@
 @include('dashboard.layouts.partails.head')
 
 <body dir={{ $dir }}>
+
+
     <div class="main-wrapper">
         @include('dashboard.layouts.partails.sidebar')
 

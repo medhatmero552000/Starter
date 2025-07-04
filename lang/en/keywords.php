@@ -3,24 +3,24 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------- 
+    |--------------------------------------------------------------------------
     | Keywords Language Lines
-    |--------------------------------------------------------------------------- 
+    |--------------------------------------------------------------------------
     | The keywords used in the admin interface in English
     |
     */
-'Welcome to Dashboard'=>' Welcome to Dashboard',
+    'Welcome to Dashboard' => 'Welcome to the Dashboard Interface',
     'index' => 'Home Page',
     'sign in' => 'Sign In',
     'home' => 'Home',
     'welcome' => 'Welcome',
     'dashboard' => 'Dashboard',
-    'admin' => 'Admin',
+    'admin' => 'Administration',
 
     'email_address' => 'Email Address',
     'password' => 'Password',
 
-    /* ---------------------------- Services Unit Keywords --------------------------- */
+    /* ---------------------------- Services Module Words --------------------------- */
     'components' => 'Components',
     'services' => 'Services',
     'id' => 'ID',
@@ -31,8 +31,8 @@ return [
     'message' => 'Messages',
     'features' => 'Features',
     'actions' => 'Actions',
-    'service_add' => 'Service Added Successfully',
-    'no_data_available' => 'No Data Available',
+    'service_add' => 'Service added successfully',
+    'no_data_available' => 'No data available',
     'add_new_service' => 'Add New Service',
 
     /* ------------------------------- Login Page ------------------------------- */
@@ -40,7 +40,7 @@ return [
     'let_me_in' => 'Sign In',
     'switch_language' => 'Switch Language',
 
-    /* -------------------------- General Admin Management -------------------------- */
+    /* -------------------------- General Administration -------------------------- */
     'admin_panel' => 'Admin Panel',
     'management' => 'Management',
     'control_panel' => 'Control Panel',
@@ -100,7 +100,7 @@ return [
     /* --------------------------- Support and Help Center --------------------------- */
     'support' => 'Support',
     'help_center' => 'Help Center',
-    'faq' => 'FAQ',
+    'faq' => 'Frequently Asked Questions',
     'contact_support' => 'Contact Support',
     'open_ticket' => 'Open Ticket',
     'ticket_status' => 'Ticket Status',
@@ -146,19 +146,19 @@ return [
     'billing_statements' => 'Billing Statements',
     'payment_gateway' => 'Payment Gateway',
     'subscription_plans' => 'Subscription Plans',
-    
+
     /* --------------------------------- Grades --------------------------------- */
     'gradeList' => 'Grade List',
     'grade' => 'Grade',
     'addgrade' => 'Add New Grade',
 
-   /* ---------------------------- Additional Keywords ---------------------------- */
-'edit' => 'Edit',
-'delete' => 'Delete',
-'confirm_delete' => 'Are you sure you want to delete this item?',
-'confirm_delete_title' => 'Confirm Delete',
-'save' => 'Save Data',
-'save_data' => ' Save Data',  // تم إضافة هذه الكلمة هنا
+    /* ---------------------------- Additional Words ---------------------------- */
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+    'confirm_delete' => 'Are you sure you want to delete this item?',
+    'confirm_delete_title' => 'Delete Confirmation',
+    'save' => 'Save',
+    'save_data' => 'Save Data',
 
     /* ---------------------------- School Management ---------------------------- */
     'school_management' => 'School Management',
@@ -195,11 +195,14 @@ return [
     'attendance' => 'Attendance',
     'student_attendance' => 'Student Attendance',
     'teacher_attendance' => 'Teacher Attendance',
-    'add_new_grade' => 'Add New Grade Level',
+    'add_new_grade' => 'Add New Grade',
     'grade_list' => 'Grade List',
-    'add_grade' => 'Add Grade Level',
-    'gradeName'=>'Grade Name',
-    'notes'=>'Notes',
-    'created_at'=>'Created At',
+    'add_grade' => 'Add Grade',
+    'gradeName' => 'Grade Name',
+    'notes' => 'Notes',
+    'created_at' => 'Created At',
+    'classroom' => 'Classrooms',
+    'classroom_list' => 'Classroom List',
+    'add_new_classroom' => 'Add New Classroom',
 
 ];

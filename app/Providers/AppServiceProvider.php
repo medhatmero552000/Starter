@@ -24,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrapFive();
         app()->setLocale(session('locale', config('app.locale')));
 
+
     }
 }
