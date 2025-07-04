@@ -3,6 +3,8 @@
 namespace App\Models\Dashboard\Auth;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Dashboard\Stage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -11,7 +13,6 @@ use Laravel\Sanctum\HasApiTokens;
 class Admin extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-protected $guard='admin';
     /**
      * The attributes that are mass assignable.
      *
@@ -39,4 +40,13 @@ protected $guard='admin';
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+       public function createdByAdmin()
+    {
+        return $this->hasMany(Stage::class, 'created_by');
+    }
+    public function updatedStages()
+{
+    return $this->hasMany(Stage::class, 'updated_by');
+}
+
 }

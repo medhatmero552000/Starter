@@ -64,5 +64,5 @@
             font-weight: 400;
         }
     </style>
-    @yield('style')
+    @yield('styles')
 </head>

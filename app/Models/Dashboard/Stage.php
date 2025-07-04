@@ -2,6 +2,7 @@
 
 namespace App\Models\Dashboard;
 
+use App\Models\Dashboard\Auth\Admin;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -34,8 +35,19 @@ class Stage extends Model
     /**
      * التحويل التلقائي لأنواع الحقول.
      */
-        protected $casts = [
-            'is_active' => 'boolean',
-        ];
-    }
+    protected $casts = [
+        'is_active' => 'boolean',
+    ];
 
+
+public function updatedByAdmin()
+{
+    return $this->belongsTo(Admin::class, 'updated_by');
+}
+
+public function createdByAdmin()
+{
+    return $this->belongsTo(Admin::class, 'created_by');
+}
+
+}

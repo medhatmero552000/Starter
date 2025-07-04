@@ -6,21 +6,21 @@ return [
     |--------------------------------------------------------------------------
     | Keywords Language Lines
     |--------------------------------------------------------------------------
-    | The keywords used in the admin interface in English
+    | Keywords used in the admin interface in English
     |
     */
-    'Welcome to Dashboard' => 'Welcome to the Dashboard Interface',
-    'index' => 'Home Page',
+    'Welcome to Dashboard' => 'Welcome to Dashboard',
+    'index' => 'Home',
     'sign in' => 'Sign In',
     'home' => 'Home',
     'welcome' => 'Welcome',
     'dashboard' => 'Dashboard',
-    'admin' => 'Administration',
+    'admin' => 'Admin',
 
     'email_address' => 'Email Address',
     'password' => 'Password',
 
-    /* ---------------------------- Services Module Words --------------------------- */
+    /* ---------------------------- Services Module --------------------------- */
     'components' => 'Components',
     'services' => 'Services',
     'id' => 'ID',
@@ -35,12 +35,12 @@ return [
     'no_data_available' => 'No data available',
     'add_new_service' => 'Add New Service',
 
-    /* ------------------------------- Login Page ------------------------------- */
+    /* ------------------------------- Auth Page ------------------------------- */
     'stay_logged_in' => 'Remember Me',
     'let_me_in' => 'Sign In',
     'switch_language' => 'Switch Language',
 
-    /* -------------------------- General Administration -------------------------- */
+    /* -------------------------- General Admin -------------------------- */
     'admin_panel' => 'Admin Panel',
     'management' => 'Management',
     'control_panel' => 'Control Panel',
@@ -58,7 +58,7 @@ return [
     'system_monitoring' => 'System Monitoring',
     'task_management' => 'Task Management',
 
-    /* ----------------------- User and Account Management ----------------------- */
+    /* ----------------------- User & Account Management ----------------------- */
     'users' => 'Users',
     'user_management' => 'User Management',
     'add_user' => 'Add User',
@@ -74,7 +74,7 @@ return [
     'inactive' => 'Inactive',
     'banned' => 'Banned',
     'suspended' => 'Suspended',
-    'phone' => 'Phone Number',
+    'phone' => 'Phone',
     'address' => 'Address',
     'confirm_password' => 'Confirm Password',
     'change_password' => 'Change Password',
@@ -96,11 +96,13 @@ return [
     'medical_history' => 'Medical History',
     'treatment_plans' => 'Treatment Plans',
     'prescriptions' => 'Prescriptions',
+    'stages' => 'Educational Stages',
+    'showall' => 'Show All',
 
-    /* --------------------------- Support and Help Center --------------------------- */
+    /* --------------------------- Support & Help Center --------------------------- */
     'support' => 'Support',
     'help_center' => 'Help Center',
-    'faq' => 'Frequently Asked Questions',
+    'faq' => 'FAQ',
     'contact_support' => 'Contact Support',
     'open_ticket' => 'Open Ticket',
     'ticket_status' => 'Ticket Status',
@@ -111,6 +113,12 @@ return [
 
     /* --------------------------- Document Management --------------------------- */
     'documents' => 'Documents',
+    'name' => 'Name',
+    'decription' => 'Description',
+    'updeated_by' => 'Updated By',
+    'added_by' => 'Added By',
+    'lastupdate' => 'Last Update',
+    'craeted_at' => 'Created At',
     'upload_document' => 'Upload Document',
     'download_document' => 'Download Document',
     'document_list' => 'Document List',
@@ -121,7 +129,7 @@ return [
     'file_sharing' => 'File Sharing',
     'secure_storage' => 'Secure Storage',
 
-    /* --------------------------- Invoices and Payments --------------------------- */
+    /* --------------------------- Billing & Payments --------------------------- */
     'invoices' => 'Invoices',
     'invoice_number' => 'Invoice Number',
     'create_invoice' => 'Create Invoice',
@@ -152,14 +160,14 @@ return [
     'grade' => 'Grade',
     'addgrade' => 'Add New Grade',
 
-    /* ---------------------------- Additional Words ---------------------------- */
+    /* ---------------------------- Extra Keywords ---------------------------- */
     'edit' => 'Edit',
     'delete' => 'Delete',
     'confirm_delete' => 'Are you sure you want to delete this item?',
     'confirm_delete_title' => 'Delete Confirmation',
-    'save' => 'Save',
+    'save' => 'Save Data',
     'save_data' => 'Save Data',
-
+  'add_new_stages' => 'Add New Stage',  
     /* ---------------------------- School Management ---------------------------- */
     'school_management' => 'School Management',
     'school_list' => 'School List',
@@ -195,14 +203,19 @@ return [
     'attendance' => 'Attendance',
     'student_attendance' => 'Student Attendance',
     'teacher_attendance' => 'Teacher Attendance',
-    'add_new_grade' => 'Add New Grade',
+    'add_new_grade' => 'Add New Stage',
+    'stages_show' => 'Show Stages',
+    'stagees_mangement' => 'Stage Management',
+    'stages' => 'Stages',
+    'stages_list' => 'Stage List',
+    'stage_name' => 'Stage Name',
+    'stage_description' => 'Stage Description',
     'grade_list' => 'Grade List',
-    'add_grade' => 'Add Grade',
-    'gradeName' => 'Grade Name',
+    'add_grade' => 'Add Stage',
+    'gradeName' => 'Stage Name',
     'notes' => 'Notes',
     'created_at' => 'Created At',
     'classroom' => 'Classrooms',
     'classroom_list' => 'Classroom List',
-    'add_new_classroom' => 'Add New Classroom',
-
+    'add_new_classroom' => 'Add New Classrooms',
 ];

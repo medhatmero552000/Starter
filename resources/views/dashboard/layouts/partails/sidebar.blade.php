@@ -19,23 +19,19 @@
                     <span class="link-title">{{ __('keywords.dashboard') }} </span>
                 </a>
             </li>
-            <li class="nav-item nav-category">إدارة المنتجات</li>
+            <li class="nav-item nav-category">{{strtoupper(__('keywords.stagees_mangement'))}}</li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false"
                     aria-controls="emails">
                     <i class="link-icon" data-feather="sliders"></i>
-                    <span class="link-title">الأقسام الرئيسية</span>
+                    <span class="link-title"> {{ __('keywords.stages') }}</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
                 <div class="collapse" id="emails">
                     <ul class="nav sub-menu">
                         <li class="nav-item">
-                            <a href="" class="nav-link">عرض الأقسام</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">إضافة قسم جديد</a>
-                        </li>
-                      
+                            <a href="{{ route('admin.stages.index') }}" class="nav-link">{{strtoupper(__('keywords.stages_show'))}}</a>
+                        </li>                   
                     </ul>
                 </div>
             </li>
