@@ -12,7 +12,7 @@ class {{ class }} extends Controller
      * Display a listing of the resource.
      */
 
-    private const PATH="admin.{{ model }}."; 
+    private const PATH="admin.{{ model.s }}."; 
     public function index()
     {
         ${{ modelVariable }} = {{ model }}::paginate(config('pagenation.count'));

@@ -32,7 +32,7 @@ Route::middleware('auth:admin')->prefix('admin')->group(function () {
         'edit' => 'stages.edit',
         'update' => 'stages.update',
         'destroy' => 'stages.destroy'
-    ]);
+    ])->parameters(['stages' => 'slug']);
 });
 
 

@@ -2,16 +2,36 @@
 
 namespace App\Models\Dashboard;
 
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 use App\Models\Dashboard\Auth\Admin;
-use Astrotomic\Translatable\Translatable;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Stage extends Model
 {
-    use HasFactory, SoftDeletes, Translatable;
+    use HasFactory, SoftDeletes, Translatable, HasSlug;
 
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions(): SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('name', 'desc')
+            ->saveSlugsTo('slug');
+    }
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     /**
      * اسم الجدول المرتبط بالموديل.
      */
@@ -40,14 +60,13 @@ class Stage extends Model
     ];
 
 
-public function updatedByAdmin()
-{
-    return $this->belongsTo(Admin::class, 'updated_by');
-}
+    public function updatedByAdmin()
+    {
+        return $this->belongsTo(Admin::class, 'updated_by');
+    }
 
-public function createdByAdmin()
-{
-    return $this->belongsTo(Admin::class, 'created_by');
-}
-
+    public function createdByAdmin()
+    {
+        return $this->belongsTo(Admin::class, 'created_by');
+    }
 }

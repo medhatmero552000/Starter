@@ -37,7 +37,7 @@ class RouteServiceProvider extends ServiceProvider
             /* ---------------------------- Admin file routes use multi langauge--------------------------- */
             Route::middleware(['web', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'])
                 ->prefix(LaravelLocalization::setLocale() )
-                ->as('admin.')
+                ->name('admin.')
                 ->group(base_path('routes/admin.php'));
         });
     }

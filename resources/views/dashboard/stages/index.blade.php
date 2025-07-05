@@ -1,6 +1,38 @@
 @extends('dashboard.layouts.master')
 @section('title', __('keywords.stages_list'))
+@section('styles')
+    {{-- لا يوجد تنسيق مخصص لهذه الصفحة --}}
+    <style>
+        .icon-btn {
+            border: none;
+            background: transparent;
+            padding: 0;
+        }
 
+        .icon-btn:hover {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        .icon-btn {
+            border: none;
+            background: transparent;
+            padding: 0;
+        }
+
+        .icon-btn:hover {
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        .text-warning-dark {
+            color: #cc8400 !important;
+            /* درجة أغمق من الأصفر */
+        }
+    </style>
+@endsection
 @section('content')
     <div class="page-content">
 
@@ -60,7 +92,7 @@
                                     </td>
 
                                     {{-- القائم بالتحديث --}}
-                                    <td>{{ $item->updatedByAdmin?->name ?? ' غير متوفر' }}</td>
+                                    <td class="text-danger">{{ $item->updatedByAdmin?->name ?? ' غير متوفر' }}</td>
 
                                     {{-- تاريخ التحديث --}}
                                     <td>
@@ -71,22 +103,25 @@
 
                                     {{-- الإجراءات --}}
                                     <td>
-                                        <div class="btn-group" role="group">
-                                            <a href="#" class="btn btn-sm btn-info"
-                                                title="{{ __('keywords.show') }}">
-                                                <i data-feather="eye"></i>
+                                        <div class="btn-group " role="group">
+                                            <a href="{{ route('admin.stages.show', $item) }}" data-bs-toggle="tooltip"
+                                                class="icon-btn me-2" title="{{ __('keywords.show') }}">
+                                                <i data-feather="eye" class="text-success"></i>
                                             </a>
-                                            <a href="#" class="btn btn-sm btn-warning"
-                                                title="{{ __('keywords.edit') }}">
-                                                <i data-feather="edit"></i>
+
+                                            <a href="#" class="icon-btn ms-2" title="{{ __('keywords.edit') }}" data-bs-toggle="tooltip"
+>
+                                                <i class="text-warning-dark" data-feather="edit"></i>
                                             </a>
                                             <form action="#" method="POST" class="d-inline"
                                                 onsubmit="return confirm('{{ __('keywords.confirm_delete') }}');">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="btn btn-sm btn-danger" title="{{ __('keywords.delete') }}">
-                                                    <i data-feather="trash"></i>
+                                                <button class="icon-btn ms-3" title="{{ __('keywords.delete') }}" data-bs-toggle="tooltip"
+>
+                                                    <i data-feather="trash-2" class="text-danger"></i>
                                                 </button>
+
                                             </form>
                                         </div>
                                     </td>
@@ -119,4 +154,6 @@
             feather.replace();
         });
     </script>
+
+
 @endsection

@@ -84,6 +84,7 @@ return [
     'suspended' => 'معلق',
     'phone' => 'رقم الهاتف',
     'address' => 'العنوان',
+    'show' => 'عرض',
     'confirm_password' => 'تأكيد كلمة المرور',
     'change_password' => 'تغيير كلمة المرور',
     'profile_picture' => 'صورة الملف الشخصي',

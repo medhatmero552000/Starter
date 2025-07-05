@@ -16,6 +16,8 @@
 
  <!-- Custom js for this page -->
  <script src="{{ asset('assets') }}/js/dashboard-dark.js"></script>
+ <script src="{{ asset('assets') }}/js/bootstrap.bundle.min.js"></script>
+
  <!-- End custom js for this page -->
 
  <script src="{{ asset('assets') }}/js/jquery.repeater.min.js"></script>
@@ -77,5 +79,13 @@
  <script>
      feather.replace();
  </script>
-
+    {{-- Tooltip init --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            tooltipTriggerList.map(function(tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        });
+    </script>
  @yield('scripts')

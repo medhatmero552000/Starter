@@ -25,7 +25,7 @@ class StageRequest extends FormRequest
             'stages' => 'required|array',
             'stages.*.name' => 'required|string|distinct|unique:stage_translations,name',
             'stages.*.desc' => 'nullable|string',
-            'stages.*.slug' => 'required_without:id|string',
+            // 'stages.*.slug' => 'required_without:id|string',
         ];
     }
     public function messages()

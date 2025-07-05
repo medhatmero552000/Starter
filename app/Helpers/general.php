@@ -1,5 +1,11 @@
 <?php
+// Constants
 define('PAGINATION_COUNT', 10);
+/*
+|-------------------------------------------------------------------------------
+|   Helper Function To Confert En numbers to Ar numbers and Convert Am Pm To ص م
+|-------------------------------------------------------------------------------       
+*/
 function formatDateLocalized($datetime)
 {
     $date = $datetime->format('j/n/Y');
