@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StageRequest extends FormRequest
 {
@@ -23,9 +24,14 @@ class StageRequest extends FormRequest
     {
         return [
             'stages' => 'required|array',
-            'stages.*.name' => 'required|string|distinct|unique:stage_translations,name',
+
+            'stages.*.name' => [
+                'required',
+                'string',
+                'distinct',
+                Rule::unique('stage_translations', 'name')->where('locale', app()->getLocale()),
+            ],
             'stages.*.desc' => 'nullable|string',
-            'stages.*.slug' => 'required_without:id|string',
         ];
     }
     public function messages()

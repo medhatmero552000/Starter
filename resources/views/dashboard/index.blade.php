@@ -187,6 +187,25 @@
 
 @endsection
 @section('script')
+@if(session('alert-message'))
+    <script>
+        Swal.fire({
+            icon: '{{ session('alert-type', 'error') }}',
+            title: '{{ session('alert-message') }}',
+            timer: 4000,
+            showConfirmButton: false,
+        });
+    </script>
+    @if ($errors->any())
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const myModal = new bootstrap.Modal(document.getElementById('stageModal'));
+            myModal.show();
+        });
+    </script>
+@endif
+
+@endif
 
 
 
