@@ -22,6 +22,7 @@
   - yajra datatables
   - blade-flags
   - spatie laravel-sluggable
+  - dark mode
 
 
      Updates:
