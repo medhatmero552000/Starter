@@ -3,7 +3,7 @@
 @endphp
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" dir="{{ $dir }} >
 
 
 
@@ -11,7 +11,7 @@
 
 @include('dashboard.layouts.partails.head')
 
-<body dir={{ $dir }}>
+<body dir={{ $dir }} >
     @include('dashboard.alerts.success')
     @include('dashboard.alerts.error')
     @include('sweetalert::alert')

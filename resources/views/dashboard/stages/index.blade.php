@@ -33,8 +33,8 @@
                         <tbody>
                             @forelse ($items as $item)
                                 <tr>
+                                    {{-- الرقم التسلسلي --}}
                                     <td>{{ $loop->iteration + ($items->currentPage() - 1) * $items->perPage() }}</td>
-
 
                                     {{-- اسم المرحلة --}}
                                     <td>{{ $item->name }}</td>
@@ -71,25 +71,42 @@
 
                                     {{-- الإجراءات --}}
                                     <td>
-                                        <div class="btn-group" role="group">
-                                            <a href="#" class="btn btn-sm btn-info"
-                                                title="{{ __('keywords.show') }}">
-                                                <i data-feather="eye"></i>
-                                            </a>
-                                            <a href="#" class="btn btn-sm btn-warning"
-                                                title="{{ __('keywords.edit') }}">
-                                                <i data-feather="edit"></i>
-                                            </a>
-                                            <form action="#" method="POST" class="d-inline"
-                                                onsubmit="return confirm('{{ __('keywords.confirm_delete') }}');">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-sm btn-danger" title="{{ __('keywords.delete') }}">
-                                                    <i data-feather="trash"></i>
-                                                </button>
-                                            </form>
+                                        <div class="dropdown dropdown-hover">
+                                            <button class="btn btn-sm btn-primary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                {{ __('keywords.actions') }}
+                                            </button>
+                                            <ul class="text-center dropdown-menu">
+                                                <li>
+                                                    <a class="dropdown-item text-success"
+                                                        href="{{ route('admin.stages.show', $item) }}">
+                                                        <i data-feather="eye" class="me-1"></i> {{ __('keywords.show') }}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item text-primary"
+                                                        href="{{ route('admin.stages.edit', $item) }}">
+                                                        <i data-feather="edit" class="me-1"></i>
+                                                        {{ __('keywords.edit') }}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <form action="#" method="POST"
+                                                        onsubmit="return confirm('{{ __('keywords.confirm_delete') }}');">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="dropdown-item text-danger" type="submit">
+                                                            <i data-feather="trash-2" class="me-1"></i>
+                                                            {{ __('keywords.delete') }}
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </td>
+
+
+
                                 </tr>
 
                             @empty
@@ -113,10 +130,10 @@
 
 @section('scripts')
     {{-- Feather Icons --}}
-    <script src="https://unpkg.com/feather-icons"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             feather.replace();
         });
     </script>
+    
 @endsection

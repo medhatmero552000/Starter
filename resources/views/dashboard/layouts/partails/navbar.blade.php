@@ -14,6 +14,15 @@
          </form>
          <ul class="navbar-nav">
              <li class="nav-item dropdown">
+
+                 {{-- زرار الدراك للصفحة --}}
+                 <button id="darkModeToggle" class="p-0 bg-transparent border-0 shadow-none me-3 btn no-hover-bg">
+                     <i id="darkModeIcon" data-feather="moon"></i>
+                 </button>
+
+
+
+                 {{-- نهاية الزرار --}}
                  {{-- زرار ريلود للصفحة --}}
                  <span id="" style="cursor: pointer;" onclick="location.reload();">
                      <i data-feather="refresh-ccw" class="me-3"></i>

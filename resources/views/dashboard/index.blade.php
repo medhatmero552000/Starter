@@ -171,9 +171,6 @@
                                         <td>Tiger Nixon</td>
                                         <td>System Architect</td>
                                         <td>Edinburgh</td>
-
-
-
                                 </tbody>
                             </table>
                         </div>

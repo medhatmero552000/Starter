@@ -46,23 +46,101 @@
     <style>
         body {
             font-family: "Cairo", sans-serif;
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 200;
         }
 
         .sidebar {
             font-family: "Cairo", sans-serif;
-            font-size: 16px !important;
-            font-weight: 400;
+            font-size: 14px !important;
+            font-weight: 200;
         }
 
         .sidebar,
         .sidebar .sidebar-body .nav .nav-item .nav-link,
         .sidebar .sidebar-body .nav .nav-item .nav-link .link-title {
             font-family: "Cairo", sans-serif;
-            font-size: 0.9375rem !important;
-            font-weight: 400;
+            font-size:0.875rem !important;
+            font-weight: 200;
         }
     </style>
+<style>
+    html.dark-mode,
+    html.dark-mode body {
+        background-color: #121212 !important;
+        color: #f0f0f0 !important;
+    }
+
+    html.dark-mode * {
+        background-color: inherit !important;
+        color: inherit !important;
+        border-color: #333 !important;
+        box-shadow: none !important;
+    }
+
+    html.dark-mode .navbar,
+    html.dark-mode .sidebar,
+    html.dark-mode .card,
+    html.dark-mode .btn,
+    html.dark-mode .dropdown-menu,
+    html.dark-mode .form-control,
+    html.dark-mode .table,
+    html.dark-mode .modal-content {
+        background-color: #1e1e2d !important;
+        color: #fff !important;
+        border-color: #444 !important;
+    }
+
+    html.dark-mode a {
+        color: #90caf9 !important;
+    }
+
+    html.dark-mode .form-control::placeholder {
+        color: #bbb !important;
+    }
+
+    html.dark-mode .table thead {
+        background-color: #29293d !important;
+    }
+
+    html.dark-mode .text-dark {
+        color: #ccc !important;
+    }
+
+    /* -----------------------------start Dark mode style ---------------------------- */
+.dark-mode,
+.dark-mode * {
+    color: #ffffff !important;
+}
+
+.dark-mode .sidebar-toggler span {
+    background-color: #ffffff !important;
+}
+
+.dark-mode a,
+.dark-mode ul,
+.dark-mode nav,
+.dark-mode nav ul li a,
+.dark-mode span,
+.dark-mode li,
+.dark-mode i,
+.dark-mode label,
+.dark-mode p,
+.dark-mode td,
+.dark-mode th,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode small {
+    color: #ffffff !important;
+}
+/* --------------------------- End Dark Mode Style -------------------------- */
+</style>
+
+
+
     @yield('styles')
 </head>
